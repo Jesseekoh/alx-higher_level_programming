@@ -8,19 +8,19 @@
 
 int is_circular(listint_t *head)
 {
-    listint_t *current, *check;
+	listint_t *current, *check;
 
-    if (head == NULL || head->next == NULL)
-        return (0);
-    current = head;
-    check = current->next;
+	if (head == NULL || head->next == NULL)
+		return (0);
+	current = head;
+	check = current->next;
 
-    while (current != NULL && check->next != NULL && check->next->next != NULL)
-    {
-        if (current == check)
-            return (1);
-        current = current->next;
-        check = check->next->next;
-    }
-    return (0);
+	while (current != NULL && check->next != NULL && check->next->next != NULL)
+	{
+		if (current == check)
+			return (1);
+		current = current->next;
+		check = check->next->next;
+	}
+	return (0);
 }
