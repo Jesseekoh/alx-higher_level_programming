@@ -6,7 +6,7 @@
  * Return: 1 if list is circular; 0 if list is not circular
  */
 
-int is_circular(listint_t *head)
+int check_cycle(listint_t *head)
 {
 	listint_t *current, *check;
 
