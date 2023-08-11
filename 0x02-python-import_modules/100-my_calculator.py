@@ -8,18 +8,19 @@ if __name__ == "__main__":
     if arg_len != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    else:
-        a = int(argv[1])
-        b = int(argv[3])
-        if argv[2] == '+':
-            print("{} + {} = {}".format(a, b, add(a, b)))
-        elif argv[2] == '-':
-            print("{} + {} = {}".format(a, b, sub(a, b)))
-        elif argv[2] == '/':
-            print("{} + {} = {}".format(a, b, div(a, b)))
-        elif argv[2] == '*':
-            print("{} + {} = {}".format(a, b, mul(a, b)))
-        else:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
 
+    a = int(argv[1])
+    b = int(argv[3])
+    if argv[2] == '+':
+        result = add(a, b)
+    elif argv[2] == '':
+        result = sub(a, b)
+    elif argv[2] == '/':
+        result = div(a, b)
+    elif argv[2] == '*':
+        result = mul(a, b)
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+
+    print("{:d} {:s} {:d} = {:d}".format(a, argv[2], b, result))
