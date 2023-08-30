@@ -7,7 +7,7 @@
 class Square:
     """Define a square"""
 
-    def __init__(self, size=0, position=0):
+    def __init__(self, size=0, position=(0, 0)):
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -36,7 +36,9 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if type(value) is int and \
+        if type(value) is tuple and \
+             type(value[0]) is int and \
+             type(value[1]) is int and \
              len(value) == 2 and \
              type(value[0]) >= 0 and value[1] >= 0:
             self.__position = value
@@ -47,12 +49,27 @@ class Square:
         """
             prints the square using #
         """
-        if self.__size == 0:
-            print()
-        else:
-            for i in range(self.position[1]):
-                print("")
-            for i in range(self.__size):
-                for j in range(self.size):
-                    print("#", end="")
+        if self.__size > 0:
+            for i in range(self.__position[1]):
                 print()
+            for x in range(self.__size):
+                print(' ' * self.__position[0], end='')
+                print('#' * self.__size)
+        else:
+            print()
+
+
+my_square_1 = Square(3)
+my_square_1.my_print()
+
+print("--")
+
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
+
+print("--")
+
+my_square_3 = Square(3, (3, 0))
+my_square_3.my_print()
+
+print("--")
