@@ -9,9 +9,10 @@
 
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t size = 0;
-	int i = 0;
+	Py_ssize_t size;
+	int i;
 
+	size = i = 0;
 	if (PyList_CheckExact(p))
 	{
 		size = PyList_Size(p);
