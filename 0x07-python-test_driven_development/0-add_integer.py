@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 0-add_integer - returns the sum of two numbers
+This module supplies one function, add_integer().
 """
 
 
