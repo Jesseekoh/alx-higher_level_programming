@@ -28,6 +28,7 @@ integers/floats")
 integers/floats")
         if len(row) is not row_len and row_len != 0:
             raise TypeError("Each row of the matrix must have the same size")
+        row_len = len(row)
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
