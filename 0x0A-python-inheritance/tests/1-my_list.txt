@@ -14,3 +14,9 @@ True
 >>> l.append(-60)
 >>> print(l)
 [30, -10, -60]
+>>> issubclass(MyList, list)
+True
+>>> l.print_sorted(1)
+Traceback (most recent call last):
+...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
