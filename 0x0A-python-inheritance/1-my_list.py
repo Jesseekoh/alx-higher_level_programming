@@ -11,5 +11,5 @@ class MyList(list):
         list (_type_): _description_
     """
     def print_sorted(self):
-        sorted_list = sorted(self)
-        print(sorted_list)
+        sorted_list = self.copy()
+        print(sorted(sorted_list))
