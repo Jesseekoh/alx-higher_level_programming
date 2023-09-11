@@ -1,0 +1,16 @@
+The ``1-my_list`` module
+
+>>> MyList = __import__('1-my_list').MyList
+>>> issubclass(MyList, list)
+True
+
+>>> l = MyList()
+>>> l.print_sorted()
+[]
+
+>>> l = MyList()
+>>> l.append(30)
+>>> l.append(-10)
+>>> l.append(-60)
+>>> print(l)
+[30, -10, -60]
