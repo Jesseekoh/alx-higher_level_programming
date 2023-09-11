@@ -10,7 +10,7 @@ class MyList(list):
     Args:
         list (_type_): _description_
     """
+
     def print_sorted(self):
-        sorted_list = self.copy()
-        sorted_list.sort()
-        print(sorted_list)
+        """prints a sorted list in ascending order"""
+        print(sorted(self))
