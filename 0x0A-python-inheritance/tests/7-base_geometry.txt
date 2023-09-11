@@ -1,7 +1,12 @@
 The ``7-base_geometry`` module
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
+>>> len(BaseGeometry.__doc__) > 0
+True
+>>> len(BaseGeometry.area.__doc__) > 0
+True
+>>> len(BaseGeometry.integer_validator.__doc__) > 0
+True
 >>> bg = BaseGeometry()
 
 >>> bg.integer_validator("my_int", 12)
