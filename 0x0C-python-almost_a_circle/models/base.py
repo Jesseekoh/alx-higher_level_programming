@@ -48,3 +48,17 @@ class Base:
 
         with open(filename, 'w') as f:
             f.write(lists)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """converts json string to dictionary
+
+        Args:
+            json_string (_type_): _description_
+
+        Returns:
+            _type_: _description_
+        """
+        if not json_string:
+            return []
+        return json.loads(json_string)
