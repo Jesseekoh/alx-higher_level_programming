@@ -100,7 +100,7 @@ class Rectangle(Base):
         stdout with #
         """
         for i in range(self.__height):
-            print(' ' * self.x)
+            print(' ' * self.x, end="")
             print('#' * self.__width)
 
     def __str__(self) -> str:
