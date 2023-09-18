@@ -142,3 +142,14 @@ class Rectangle(Base):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Square"""
+        square_dict = {}
+
+        square_dict["id"] = self.id
+        square_dict["width"] = self.width
+        square_dict["height"] = self.height
+        square_dict["x"] = self.x
+        square_dict["y"] = self.y
+        return (square_dict)
