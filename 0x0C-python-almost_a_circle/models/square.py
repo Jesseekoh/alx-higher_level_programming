@@ -58,7 +58,9 @@ class Square(Rectangle):
         square_dict = {}
 
         square_dict["id"] = self.id
-        square_dict["size"] = self.size
+        square_dict["width"] = self.width
+        square_dict["height"] = self.height
+        # square_dict["size"] = self.size
         square_dict["x"] = self.x
         square_dict["y"] = self.y
 
