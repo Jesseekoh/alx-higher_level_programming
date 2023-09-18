@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Square module"""
-from base import Base
+from models.rectangle import Rectangle
 
 
-class Square(Base):
+class Square(Rectangle):
     """Define Square class"""
 
     def __init__(self, size, x=0, y=0, id=None) -> None:
@@ -18,7 +18,7 @@ class Square(Base):
 
         self.width = size
         self.height = size
-        super().__init__(x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self) -> str:
         return "[Square] ({}) {}/{} - {}"\
