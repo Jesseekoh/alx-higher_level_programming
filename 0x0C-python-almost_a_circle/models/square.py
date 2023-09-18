@@ -28,9 +28,8 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """setter for size"""
-        self.height = value
         self.width = value
-        self.__size = value
+        self.height = value
 
     def __str__(self) -> str:
         return "[Square] ({}) {}/{} - {}"\
