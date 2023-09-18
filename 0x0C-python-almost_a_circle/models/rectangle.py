@@ -113,4 +113,19 @@ class Rectangle(Base):
 
         return '[Rectangle] ({}) {}/{} - {}/{}'\
             .format(self.id, self.x, self.y, self.width, self.height)
-        return super().__str__()
+
+    def update(self, *args):
+        """Assigns a value to each argument
+        """
+
+        for i in range(len(args)):
+            if i == 0:
+                self.id = args[i]
+            elif i == 1:
+                self.width = args[i]
+            elif i == 2:
+                self.height = args[i]
+            elif i == 3:
+                self.x = args[i]
+            elif i == 4:
+                self.y = args[i]
