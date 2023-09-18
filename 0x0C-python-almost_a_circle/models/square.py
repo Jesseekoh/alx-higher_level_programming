@@ -53,6 +53,17 @@ class Square(Rectangle):
             if "y" in kwargs:
                 self.y = kwargs["y"]
 
+    def to_dictionary(self):
+        """returns the dictionary representation of a Square"""
+        square_dict = {}
+
+        square_dict["id"] = self.id
+        square_dict["size"] = self.size
+        square_dict["x"] = self.x
+        square_dict["y"] = self.y
+
+        return (square_dict)
+
     def __str__(self) -> str:
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.width)
