@@ -3,6 +3,7 @@
 import json
 import os.path
 import csv
+import turtle
 
 
 class Base:
@@ -151,3 +152,17 @@ class Base:
             list_ins.append(cls.create(**matrix[index]))
 
         return list_ins
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        t = turtle.Turtle()
+        for i in list_rectangles:
+            t.setpos(i.x, i.y)
+            t.towards(i.width)
+            t.right(90)
+            t.towards(i.height)
+            t.right(90)
+            t.towards(i.width)
+            t.right(90)
+            t.towards(i.height)
+
