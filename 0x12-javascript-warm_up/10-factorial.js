@@ -3,7 +3,7 @@
 const { argv } = require('process');
 function factorial (a) {
   const n = Number(a);
-  if (n === 0) {
+  if (n === 0 || isNaN(n)) {
     return 1;
   }
 
