@@ -6,4 +6,3 @@ for (const entry in dict) {
   output[dict[entry]].push(entry);
 }
 console.log(output);
-
